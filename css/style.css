@@ -1176,7 +1176,7 @@ a:hover, span:hover {
 
 /* ====================== [ End Text Animation & Images ] ====================== */
 /* ====================== [ Start Cursor Style ] ====================== */
-body {
+/* body {
     cursor: none;
 }
 
@@ -1210,7 +1210,7 @@ body {
     height: 80px;
     background-color: #75dab4;
     opacity: .3;
-}
+} */
 
 .cursor-outer {
     margin-left: -15px;
