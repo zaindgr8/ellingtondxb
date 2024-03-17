@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
+
+    <head>
+    <title>Ellington Properties Dubai</title>
+    <!-- Your CSS and other head elements go here -->
         <!-- Metas -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -22,8 +26,104 @@
         <link rel="stylesheet" href="/css/plugins.css"/>
         <!-- Core Style Css -->
         <link rel="stylesheet" href="/css/style.css"/>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "-qHCIhAQ1kI35Eb5x",
+      });
+   })();
+</script>
+
     </head>
     <body class="position-r">
+
+           <script>
+    function SendMail(event) {
+        event.preventDefault(); // Prevent form submission and page reload
+        var params = {
+            name_lead: document.getElementById("name_lead").value,
+            email_lead: document.getElementById("email_lead").value,
+            contact_lead: document.getElementById("contact_lead").value,
+            message_lead: document.getElementById("message_lead").value,
+
+            from_name: document.getElementById("from_name").value,
+            email_id1: document.getElementById("email_id1").value,
+            email_id: document.getElementById("email_id").value,
+            message: document.getElementById("message").value,
+            contact: document.getElementById("contact").value
+        };
+        emailjs.send("service_bl8r4l4", "template_15wqbyp", params)
+            .then(function(res) {
+                alert("Success! " + res.status);
+                // Close the modal after email is sent
+                document.getElementById('popup-box').style.display = 'none';
+            })
+            .catch(function(error) {
+                alert("Error sending email: " + error);
+            });
+    }
+</script>
+
+
+          <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById('popup-box').style.display = 'block';
+            }, 5000); // Adjust the delay (in milliseconds) as needed
+        });
+
+        function closePopup() {
+            document.getElementById('popup-box').style.display = 'none';
+        }
+
+        function subscribe() {
+            var email = document.getElementById('email').value;
+            // Send email subscription logic here
+            // For demonstration, let's just log the email
+            console.log('Subscribed with email: ' + email);
+            closePopup(); // Close the popup after subscription
+        }
+    </script>
+
+    <script> 
+    function closePopup(event) {
+        event.preventDefault(); // Prevent default action (e.g., form submission)
+        document.getElementById('popup-box').style.display = 'none';
+    }
+    </script>
+
+
+<div id="popup-box" class="popup">
+    <div class="popup-content">
+        <img src="/img/elogo.png" alt="Logo" class="logo">
+        <form id="signup-form">
+            <div class="form-group">               
+                <input id="name_lead" type="text" name="name_lead" placeholder="Enter Name" required="required">
+            </div>
+            <div class="form-group">             
+                <input id="email_lead" type="email" name="email_lead" placeholder="Enter Email" required="required">
+            </div>
+            <div class="form-group">
+                <input id="contact_lead" type="tel" name="contact_lead" placeholder="Enter Contact" required="required">
+            </div>
+            <div class="form-group">
+                <input id="message_lead" type="text" name="message_lead" placeholder="Enter Message" required="required">
+            </div>
+            <button onclick="SendMail(event)" type="button">Submit</button>
+        </form>
+        <span class="close" onclick="closePopup(event)">&times;</span>
+    </div>
+</div>
+
+
+       
+
+
         <!-- ==================== Start Loading ==================== -->
         <div id="preloader"></div>
         <!-- ==================== End Loading ==================== -->
@@ -226,7 +326,6 @@
                                 <p class="wow txt" data-splitting>Ellington Properties isn't just another real estate developer in Dubai. Since 2014, we've been pushing boundaries as Dubai's leading design-focused developer.
 
 We believe in creating more than just residences. We craft communities that inspire and elevate high-quality living.  Every project reflects our commitment to artistry and impeccable architecture.
-
 We transcend them, ensuring your investment remains a source of pride for generations to come.</p>
                                 <div class="ftbox mt-30">
                                     <ul>
@@ -272,6 +371,7 @@ We transcend them, ensuring your investment remains a source of pride for genera
             </div>
             <!-- ==================== End about ==================== -->
             <!-- ==================== Start Services ==================== -->
+            
             <section class="services section-padding sub-bg">
                 <div class="container">
                     <div class="sec-head custom-font text-center">
@@ -662,8 +762,10 @@ We transcend them, ensuring your investment remains a source of pride for genera
             </section>
             
             <!-- ==================== End Blog ==================== -->
-            <!-- ==================== Start Blog ==================== -->
-            <section class="contact-sec section-padding">
+             
+            <!-- ==================== Start Contact ==================== -->
+
+          <section class="contact-sec section-padding">
                 <div class="container">
                     <div class="sec-head custom-font text-center">
                         <h6 class="wow fadeIn" data-wow-delay=".5s">Get In Touch</h6>
@@ -673,48 +775,50 @@ We transcend them, ensuring your investment remains a source of pride for genera
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
                             <div class="form wow fadeInUp" data-wow-delay=".5s">
-                                <form name="Contact" id="contact-form" method="post" action="contact.php">
+                                <!-- <form name="Contact" id="contact-form" method="post" action="contact.php"> -->
                                     <div class="messages"></div>
                                     <div class="controls">
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <div class="form-group">
+                                                    <input id="from_name" type="text" name="name" placeholder="Name" required="required">
+                                                </div>
+                                                 <div class="form-group">
+                                                    <input id="contact" type="tel" name="contact" placeholder="Contact" required="required">
+                                                </div>
+                                                 <div class="form-group">
+                                                    <input id="email_id1" type="email" name="email_id1" placeholder="Enter Email" required="required">
+                                                </div>
+                                            </div>
+                                         
+                                            <!-- <div class="col-lg-4">
+                                                <div class="form-group">
                                                     <input id="form_name" type="text" name="name" placeholder="Name" required="required">
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input id="form_email" type="email" name="email" placeholder="Email" required="required">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input id="form_name" type="text" name="name" placeholder="Name" required="required">
-                                                </div>
-                                            </div>
+                                            </div> -->
                                             <div class="col-12">
                                                 <div class="form-group">
-                                                    <textarea id="form_message" name="message" placeholder="Message" rows="4" required="required"></textarea>
+                                                    <textarea id="message" name="message" placeholder="Message" rows="4" required="required"></textarea>
                                                 </div>
                                             </div>
                                             <div data-netlify-recaptcha="true"></div>
                                             <div class="col-12">
                                                 <div class="text-center">
-                                                    <button type="submit" class="simple-btn custom-font cursor-pointer">
-                                                        <span>Send
-                                                        Message</span>
+                                                    <button type="submit" onclick="SendMail(event)" class="simple-btn custom-font cursor-pointer">
+                                                        <span>Send</span>
                                                     </button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </form>
+                                <!-- </form> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- ==================== End Blog ==================== -->
+            <!-- ==================== End Contact ==================== -->
+       
             <!-- ==================== Start Footer ==================== -->
             <footer class="footer-half sub-bg section-padding pb-0">
                 <div class="container">
@@ -745,8 +849,8 @@ We transcend them, ensuring your investment remains a source of pride for genera
                                     </ul> -->
                                 </div>
                                 <div class="social-icon">
-                                    <h6 class="custom-font stit simple-btn">Follow Us</h6>
-                                    <div class="social">
+                                    <!-- <h6 class="custom-font stit simple-btn">Follow Us</h6> -->
+                                    <!-- <div class="social">
                                         <a href="#0" class="icon">
                                             <i class="fab fa-facebook-f"></i>
                                         </a>
@@ -759,20 +863,21 @@ We transcend them, ensuring your investment remains a source of pride for genera
                                         <a href="#0" class="icon">
                                             <i class="fab fa-behance"></i>
                                         </a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-5 offset-lg-2">
                             <div class="subscribe mb-50">
-                                <h6 class="custom-font stit simple-btn">Newslatter</h6>
-                                <p>Sign up for subscribe out newsletter!</p>
-                                <form name="Newsletter" data-netlify="true">
-                                    <div class="form-group custom-font">
-                                        <input type="email" name="subscribe" placeholder="Your Email">
-                                        <button class="cursor-pointer">Subscribe</button>
+                                <h6 class="custom-font stit simple-btn">Newsletter</h6>
+                                <p>Sign up for subscribe our newsletter!</p>
+
+                                <section>
+                                    <div class="form-group custom-font">   
+                                        <input id="email_id" type="email" name="email" placeholder="Email" required="required">
+                                        <button type="submit" onclick="SendMail(event)" class="cursor-pointer">Subscribe</button>
                                     </div>
-                                </form>
+                                </section>
                             </div>
                             <!-- <div class="insta">
                                 <h6 class="custom-font stit simple-btn">Instagram Post</h6>
@@ -793,7 +898,6 @@ We transcend them, ensuring your investment remains a source of pride for genera
                     <div class="copyrights text-center">
                         <p>
                             © 2024, Ellington Properties Dubai. All Rights Reserved.</a>
-                            .
                         </p>
                     </div>
                 </div>
