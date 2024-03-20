@@ -94,35 +94,38 @@
         document.getElementById('popup-box').style.display = 'none';
     }
     </script>
-
-
+    <script>
+    function openModal() {
+        document.getElementById('popup-box').style.display = 'block';
+    }
+</script>
 <div id="popup-box" class="popup">
     <div class="popup-content">
-     <section class="h-screen">
-    <div class="container1">
-      <div class="left-column">
-        <img src="/img/slid/cvr.jpg" alt="Sample image" />
-      </div>
-      <div class="right-column">
-      <form id="signup-form">
-                <div class="form-group1">               
-                    <input class="ibox" id="name_lead" type="text" name="name_lead" placeholder="Enter Your Name" required="required">
+        <section class="h-screen">
+            <div class="container1">
+                <div class="left-column">
+                    <img src="/img/slid/cvr.jpg" alt="Sample image" />
                 </div>
-                <div class="form-group1">             
-                    <input class="ibox" id="email_lead" type="email" name="email_lead" placeholder="Your Email Address" required="required">
+                <div class="right-column">
+                    <form id="signup-form">
+                        <div class="form-group1">               
+                            <input class="ibox" id="name_lead" type="text" name="name_lead" placeholder="Enter Your Name" required="required">
+                        </div>
+                        <div class="form-group1">             
+                            <input class="ibox" id="email_lead" type="email" name="email_lead" placeholder="Your Email Address" required="required">
+                        </div>
+                        <div class="form-group1">
+                            <input class="ibox" id="contact_lead" type="tel" name="contact_lead" placeholder="Your Contact Number" required="required">
+                        </div>
+                        <div class="form-group1">
+                            <input class="ibox" id="message_lead" type="text" name="message_lead" placeholder="Type Your Query Here " required="required">
+                        </div>
+                        <button onclick="SendMail(event)" class="ibuton" type="button">Submit</button>
+                    </form>
+                    <span class="close" onclick="closePopup(event)">&times;</span>
                 </div>
-                <div class="form-group1">
-                    <input class="ibox" id="contact_lead" type="tel" name="contact_lead" placeholder="Your Contact Number" required="required">
-                </div>
-                <div class="form-group1">
-                    <input class="ibox" id="message_lead" type="text" name="message_lead" placeholder="Type Your Query Here " required="required">
-                </div>
-                <button onclick="SendMail(event)" class="ibuton" type="button">Submit</button>
-            </form>
-               <span class="close" onclick="closePopup(event)">&times;</span>
-      </div>
-    </div>
-  </section>
+            </div>
+        </section>
     </div>
 </div>
 
@@ -197,7 +200,7 @@
                                             </h1>
                                             <p>Experience the pinnacle of luxury living in Dubai. Explore our breathtaking residences in Dubai's most sought-after locations.</p>
                                             <a href="#0" class="btn-curve btn-lit mt-30">
-                                                <span>Look More</span>
+                                                <span id="open-modal"  onclick="openModal()">Learn More</span>
                                             </a>
                                         </div>
                                     </div>
@@ -216,7 +219,7 @@
                                             </h1>
                                             <p>Elevate your lifestyle amidst breathtaking architecture and exquisite amenities. Discover unparalleled luxury</p>
                                             <a href="#0" class="btn-curve btn-lit mt-30">
-                                                <span>Look More</span>
+                                                <span id="open-modal"  onclick="openModal()">Learn More</span>
                                             </a>
                                         </div>
                                     </div>
@@ -233,7 +236,7 @@
                                             <h1 data-splitting>Crafting Dreams</h1>
                                             <p>We're more than just developers – we're dream crafters and legacy builders.  Discover how we're shaping the skyline and creating enduring landmarks.</p>
                                             <a href="#0" class="btn-curve btn-lit mt-30">
-                                                <span>Look More</span>
+                                              <span id="open-modal"  onclick="openModal()">Learn More</span>
                                             </a>
                                         </div>
                                     </div>
@@ -411,10 +414,10 @@ We transcend them, ensuring your investment remains a source of pride for genera
                             <!-- gallery item -->
                             <div class="col-md-6 items brand lg-mr wow fadeInUp" data-wow-delay=".4s">
                                 <div class="item-img">
-                                    <a href="/pages/index4.html" class="imago wow">
+                                    <span id="open-modal" onclick="openModal()" class="imago wow">
                                         <img src="../img/portfolio/mas1/clay2.jpg" alt="image">
                                         <div class="item-img-overlay"></div>
-                                    </a>
+                                    </span>
                                 </div>
                                 <div class="cont">
                                     <span class="tags">
@@ -427,7 +430,7 @@ We transcend them, ensuring your investment remains a source of pride for genera
                             <!-- gallery item -->
                             <div class="col-md-6 items brand wow fadeInUp" data-wow-delay=".4s">
                                 <div class="item-img">
-                                    <a href="/pages/index4.html" class="imago wow">
+                                     <span id="open-modal" onclick="openModal()" class="imago wow">
                                         <img src="../img/portfolio/mas1/clay3.jpg" alt="image">
                                         <div class="item-img-overlay"></div>
                                     </a>
@@ -443,7 +446,7 @@ We transcend them, ensuring your investment remains a source of pride for genera
                             <!-- gallery item -->
                             <div class="col-md-6 items web wow fadeInUp" data-wow-delay=".4s">
                                 <div class="item-img">
-                                    <a href="/pages/index4.html" class="imago wow">
+                                      <span id="open-modal" onclick="openModal()" class="imago wow">
                                         <img src="../img/portfolio/mas1/mercer.jpg" alt="image">
                                         <div class="item-img-overlay"></div>
                                     </a>
@@ -459,7 +462,7 @@ We transcend them, ensuring your investment remains a source of pride for genera
                             <!-- gallery item -->
                             <div class="col-md-6 items web wow fadeInUp" data-wow-delay=".4s">
                                 <div class="item-img">
-                                    <a href="/pages/index4.html" class="imago wow">
+                                      <span id="open-modal" onclick="openModal()" class="imago wow">
                                         <img src="../img/portfolio/mas1/mercer2.jpg" alt="image">
                                         <div class="item-img-overlay"></div>
                                     </a>
@@ -475,7 +478,7 @@ We transcend them, ensuring your investment remains a source of pride for genera
                             <!-- gallery item -->
                             <div class="col-md-6 items graphic wow fadeInUp" data-wow-delay=".4s">
                                 <div class="item-img">
-                                    <a href="/pages/index4.html" class="imago wow">
+                                     <span id="open-modal" onclick="openModal()" class="imago wow">
                                         <img src="../img/portfolio/mas1/arbor.jpg" alt="image">
                                         <div class="item-img-overlay"></div>
                                     </a>
@@ -491,7 +494,7 @@ We transcend them, ensuring your investment remains a source of pride for genera
                             <!-- gallery item -->
                             <div class="col-md-6 items graphic wow fadeInUp" data-wow-delay=".4s">
                                 <div class="item-img">
-                                    <a href="/pages/index4.html" class="imago wow">
+                                      <span id="open-modal" onclick="openModal()" class="imago wow">
                                         <img src="../img/portfolio/mas1/arbor1.jpg" alt="image">
                                         <div class="item-img-overlay"></div>
                                     </a>
