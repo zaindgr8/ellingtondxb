@@ -68,8 +68,6 @@
             });
     }
 </script>
-
-
           <script>
         document.addEventListener("DOMContentLoaded", function() {
             setTimeout(function() {
@@ -100,29 +98,61 @@
 
 <div id="popup-box" class="popup">
     <div class="popup-content">
-        <img src="/img/elogo.png" alt="Logo" class="logo">
-        <form id="signup-form">
-            <div class="form-group">               
-                <input id="name_lead" type="text" name="name_lead" placeholder="Enter Name" required="required">
-            </div>
-            <div class="form-group">             
-                <input id="email_lead" type="email" name="email_lead" placeholder="Enter Email" required="required">
-            </div>
-            <div class="form-group">
-                <input id="contact_lead" type="tel" name="contact_lead" placeholder="Enter Contact" required="required">
-            </div>
-            <div class="form-group">
-                <input id="message_lead" type="text" name="message_lead" placeholder="Enter Message" required="required">
-            </div>
-            <button onclick="SendMail(event)" type="button">Submit</button>
-        </form>
-        <span class="close" onclick="closePopup(event)">&times;</span>
+     <section class="h-screen">
+    <div class="container1">
+      <div class="left-column">
+        <img src="/img/slid/cvr.jpg" alt="Sample image" />
+      </div>
+      <div class="right-column">
+      <form id="signup-form">
+                <div class="form-group1">               
+                    <input class="ibox" id="name_lead" type="text" name="name_lead" placeholder="Enter Your Name" required="required">
+                </div>
+                <div class="form-group1">             
+                    <input class="ibox" id="email_lead" type="email" name="email_lead" placeholder="Your Email Address" required="required">
+                </div>
+                <div class="form-group1">
+                    <input class="ibox" id="contact_lead" type="tel" name="contact_lead" placeholder="Your Contact Number" required="required">
+                </div>
+                <div class="form-group1">
+                    <input class="ibox" id="message_lead" type="text" name="message_lead" placeholder="Type Your Query Here " required="required">
+                </div>
+                <button onclick="SendMail(event)" class="ibuton" type="button">Submit</button>
+            </form>
+               <span class="close" onclick="closePopup(event)">&times;</span>
+      </div>
+    </div>
+  </section>
     </div>
 </div>
 
 
-       
 
+<!-- <div id="popup-box" class="popup">
+    <div class="popup-content">
+        <div class="left-section">
+            <img src="/img/elogo.png" alt="Logo" class="logo">
+        </div>
+        <div class="right-section">
+            <form id="signup-form">
+                <div class="form-group">               
+                    <input id="name_lead" type="text" name="name_lead" placeholder="Enter Name" required="required">
+                </div>
+                <div class="form-group">             
+                    <input id="email_lead" type="email" name="email_lead" placeholder="Enter Email" required="required">
+                </div>
+                <div class="form-group">
+                    <input id="contact_lead" type="tel" name="contact_lead" placeholder="Enter Contact" required="required">
+                </div>
+                <div class="form-group">
+                    <input id="message_lead" type="text" name="message_lead" placeholder="Enter Message" required="required">
+                </div>
+                <button onclick="SendMail(event)" type="button">Submit</button>
+            </form>
+            <span class="close" onclick="closePopup(event)">&times;</span>
+        </div>
+    </div>
+</div> -->
 
         <!-- ==================== Start Loading ==================== -->
         <div id="preloader"></div>
@@ -145,58 +175,9 @@
                 <a class="logo" href="#">
                     <img src="/img/elogowhite.png" alt="logo">
                 </a>
-                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-bar">
-                        <i class="fas fa-bars"></i>
-                    </span>
-                </button> -->
-                <!-- navbar links -->
+              
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="index.html">Main Home</a>
-                                <a class="dropdown-item" href="./pages/index2.html">Creative Studio</a>
-                                <a class="dropdown-item" href="./pages/index3.html">Business Startup</a>
-                                <a class="dropdown-item" href="./pages/index4.html">One Page</a>
-                                <a class="dropdown-item" href="./pages/index5.html">Freelancer</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Showcases</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="./pages/showcases/showcase.html">Full Screen</a>
-                                <a class="dropdown-item" href="./pages/showcases/showcase2.html">Creative Carousel</a>
-                                <a class="dropdown-item" href="./pages/showcases/showcase3.html">Radius Carousel</a>
-                                <a class="dropdown-item" href="./pages/showcases/showcase4.html">Columns Carousel</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./about/about.html">About</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Portfolio</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="./pages/works/works.html">Mouse Info</a>
-                                <a class="dropdown-item" href="./pages/works/works2.html">Masonry 3 Columns</a>
-                                <a class="dropdown-item" href="./pages/works/works3.html">Masonry 2 Columns</a>
-                                <a class="dropdown-item" href="./pages/works/works4.html">Pinterest List</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contact/contact.html">Contact</a>
-                        </li>
-                    </ul> -->
-                    <!-- <div class="search">
-                        <span class="icon pe-7s-search cursor-pointer"></span>
-                        <div class="search-form text-center custom-font">
-                            <form>
-                                <input type="text" name="search" placeholder="Search">
-                            </form>
-                            <span class="close pe-7s-close cursor-pointer"></span>
-                        </div>
-                    </div> -->
+                
                 </div>
             </div>
         </nav>
@@ -271,7 +252,7 @@
                     </div>
                 </div>
                 <div class="swiper-pagination top botm custom-font"></div>
-                <!-- <div class="social-icon">
+             
                     <a href="#0">
                         <i class="fab fa-facebook-f"></i>
                     </a>
@@ -529,139 +510,6 @@ We transcend them, ensuring your investment remains a source of pride for genera
             </section>
             <!-- ==================== End Works ==================== -->
             <!-- ==================== Start testimonials ==================== -->
-            <section class="testimonials section-padding bg-img" data-background="../img/pattern.png">
-                <div class="container position-re">
-                    <div class="sec-head custom-font text-center">
-                        <h6 class="wow fadeIn" data-wow-delay=".5s">What Our Client's Says?</h6>
-                        <h3 class="wow" data-splitting>Testimonials.</h3>
-                        <span class="tbg">Testimonials</span>
-                    </div>
-                    <div class="row justify-content-center wow fadeInUp" data-wow-delay=".5s">
-                        <div class="col-lg-8">
-                            <div class="slic-item">
-                                <div class="item">
-                                    <p>Ellington Properties elevated my expectations for luxury living in Dubai. Their residences are not just beautiful, but meticulously crafted with top-notch quality. The sense of community they foster truly sets them apart.</p>
-                                    <div class="info">
-                                        <div class="cont">
-                                            <div class="author">
-                                                <div class="img">
-                                                    <img src="../img/clients/1.jpg" alt="">
-                                                </div>
-                                                <h6 class="author-name custom-font">Alex Regelman</h6>
-                                                <span class="author-details">Investor</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p>From the initial consultation to the final handover, Ellington Properties provided an exceptional experience. Their design expertise is unparalleled, and they delivered a dream home that perfectly reflects our taste.</p>
-                                    <div class="info">
-                                        <div class="cont">
-                                            <div class="author">
-                                                <div class="img">
-                                                    <img src="../img/clients/2.jpg" alt="">
-                                                </div>
-                                                <h6 class="author-name custom-font">Alex Regelman</h6>
-                                                <span class="author-details">Investor</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p>Investing in an Ellington property was one of the best decisions I've ever made. Their commitment to timeless design ensures my property remains an asset for years to come. I highly recommend Ellington to anyone seeking a truly remarkable living experience in Dubai.</p>
-                                    <div class="info">
-                                        <div class="cont">
-                                            <div class="author">
-                                                <div class="img">
-                                                    <img src="../img/clients/3.jpg" alt="">
-                                                </div>
-                                                <h6 class="author-name custom-font">Alex Regelman</h6>
-                                                <span class="author-details">Investor</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="arrows">
-                        <div class="next cursor-pointer">
-                            <span class="pe-7s-angle-right"></span>
-                        </div>
-                        <div class="prev cursor-pointer">
-                            <span class="pe-7s-angle-left"></span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- ==================== End testimonials ==================== -->
-            <!-- ==================== Start Team ==================== -->
-            
-            <!-- <div class="team-crv section-padding">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5 valign">
-                            <div class="content wow fadeInUp" data-wow-delay=".5s">
-                                <div class="sub-title">
-                                    <h6>Our Staff</h6>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                                <h3 class="co-tit custom-font mb-15">We help to create
-                                visual strategies.</h3>
-                                <p>We are AVO. We create award-winning websites, remarkable brands and cutting-edge
-                                apps.Nullam
-                                imperdie.</p>
-                                <div class="skills-box mt-40">
-                                    <div class="skill-item">
-                                        <h6 class="custom-font">UI / UX Design</h6>
-                                        <div class="skill-progress">
-                                            <div class="progres custom-font" data-value="90%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <h6 class="custom-font">Apps Development</h6>
-                                        <div class="skill-progress">
-                                            <div class="progres custom-font" data-value="80%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 offset-lg-1">
-                            <div class="img-box">
-                                <div class="row">
-                                    <div class="col-sm-6 toright">
-                                        <div class="full-width">
-                                            <div class="img sizxl mb-30" data-tooltip-tit="Stephanie Lawrence" data-tooltip-sub="CEO, Colabrio Media">
-                                                <img src="../img/team/01.jpg" alt="" class="imago wow">
-                                            </div>
-                                            <div class="img sizmd" data-tooltip-tit="Alex Regelman" data-tooltip-sub="Co-Founder, Colabrio Media">
-                                                <img src="../img/team/02.jpg" alt="" class="imago wow">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 toleft valign">
-                                        <div class="full-width text-left">
-                                            <div class="img sizmd mb-30" data-tooltip-tit="Stacey Stamper" data-tooltip-sub="Network Partner, Colabrio Media">
-                                                <img src="../img/team/03.jpg" alt="" class="imago wow">
-                                            </div>
-                                            <div class="img sizsm" data-tooltip-tit="Stephanie Lawrence" data-tooltip-sub="CEO, Colabrio Media">
-                                                <img src="../img/team/4.jpg" alt="" class="imago wow">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            
-            <!-- ==================== End Team ==================== -->
-            <!-- ==================== Start Blog ==================== -->
-
             <section class="blog-grid section-padding sub-bg">
                 <div class="container">
                     <div class="sec-head custom-font text-center">
@@ -694,7 +542,6 @@ We transcend them, ensuring your investment remains a source of pride for genera
                                         <a href="#0">Dutco and Ellington Properties introduce Art Bay in Al Jaddaf, Dubai.</a>
                                     </h6>
                                     <div class="btn-more custom-font">
-                                        <!-- <a href="#0" class="simple-btn">Read More</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -723,7 +570,6 @@ We transcend them, ensuring your investment remains a source of pride for genera
                                         <a href="#0">Ellington Properties receives five prestigious awards at the 2023 International Property Awards.</a>
                                     </h6>
                                     <div class="btn-more custom-font">
-                                        <!-- <a href="#0" class="simple-btn">Read More</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -752,7 +598,6 @@ We transcend them, ensuring your investment remains a source of pride for genera
                                         <a href="#0">Dutco and Ellington Properties reveal a fresh residential project, One River Point, under the Dutco Ellington brand.</a>
                                     </h6>
                                     <div class="btn-more custom-font">
-                                        <!-- <a href="#0" class="simple-btn">Read More</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -775,7 +620,6 @@ We transcend them, ensuring your investment remains a source of pride for genera
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
                             <div class="form wow fadeInUp" data-wow-delay=".5s">
-                                <!-- <form name="Contact" id="contact-form" method="post" action="contact.php"> -->
                                     <div class="messages"></div>
                                     <div class="controls">
                                         <div class="row">
@@ -791,11 +635,6 @@ We transcend them, ensuring your investment remains a source of pride for genera
                                                 </div>
                                             </div>
                                          
-                                            <!-- <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input id="form_name" type="text" name="name" placeholder="Name" required="required">
-                                                </div>
-                                            </div> -->
                                             <div class="col-12">
                                                 <div class="form-group">
                                                     <textarea id="message" name="message" placeholder="Message" rows="4" required="required"></textarea>
@@ -831,39 +670,10 @@ We transcend them, ensuring your investment remains a source of pride for genera
                                     </a>
                                 </div>
                                 <div class="con-info custom-font">
-                                    <!-- <ul>
-                                        <li>
-                                            <span>Email : </span>
-                                            Avogeek_support@website.com
-                                        </li>
-                                        <li>
-                                            <span>Address : </span>
-                                            A32 , Ave 15th Street, Door 211, San Franciso, USA
-                                        32490.
-                                    
-                                        </li>
-                                        <li>
-                                            <span>Phone : </span>
-                                            (+1) 2345 678 44 88
-                                        </li>
-                                    </ul> -->
+                               
                                 </div>
                                 <div class="social-icon">
-                                    <!-- <h6 class="custom-font stit simple-btn">Follow Us</h6> -->
-                                    <!-- <div class="social">
-                                        <a href="#0" class="icon">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                        <a href="#0" class="icon">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="#0" class="icon">
-                                            <i class="fab fa-pinterest"></i>
-                                        </a>
-                                        <a href="#0" class="icon">
-                                            <i class="fab fa-behance"></i>
-                                        </a>
-                                    </div> -->
+                               
                                 </div>
                             </div>
                         </div>
@@ -879,20 +689,7 @@ We transcend them, ensuring your investment remains a source of pride for genera
                                     </div>
                                 </section>
                             </div>
-                            <!-- <div class="insta">
-                                <h6 class="custom-font stit simple-btn">Instagram Post</h6>
-                                <div class="insta-gallary">
-                                    <a href="#0">
-                                        <img src="../img/insta/1.jpg" alt="">
-                                    </a>
-                                    <a href="#0">
-                                        <img src="../img/insta/2.jpg" alt="">
-                                    </a>
-                                    <a href="#0">
-                                        <img src="../img/insta/3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div> -->
+                       
                         </div>
                     </div>
                     <div class="copyrights text-center">
